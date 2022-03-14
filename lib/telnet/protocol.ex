@@ -33,14 +33,15 @@ defmodule EchoServer.Telnet.Protocol do
 
   # handle input
 
-  def handle_info({:tcp, _socket, <<@iac>> <> _}, state) do
+  def handle_info({:tcp, _socket, <<@iac>> <> _rest = iac}, state) do
     # client will stop receiving output. Why?
+    IO.inspect iac
     {:noreply, state}
   end
   def handle_info({:tcp, socket, input}, %{transport: transport} = state) do
     IO.inspect input
     case input do
-      "quit" <> _ -> send(self, {:tcp_closed, socket})
+      "quit" <> _ -> send(self(), {:tcp_closed, socket})
       _ -> transport.send(socket, output(input))
     end
     {:noreply, state}
