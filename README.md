@@ -1,21 +1,11 @@
 # EchoServer
 
-**TODO: Add description**
+Basic echoserver implementation in elixir from: http://blog.oestrich.org/2017/07/using-ranch-with-elixir/
 
-## Installation
+To start navigate to the folder and type the following:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `echo_server` to your list of dependencies in `mix.exs`:
+> iex -S mix
+> EchoServer.start
 
-```elixir
-def deps do
-  [
-    {:echo_server, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/echo_server](https://hexdocs.pm/echo_server).
-
+Connect via telnet with
+> telnet localhost 4000
