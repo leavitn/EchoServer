@@ -1,6 +1,6 @@
 # EchoServer
 
-Basic echoserver implementation in elixir from: http://blog.oestrich.org/2017/07/using-ranch-with-elixir/
+Basic telnet echo server implementation in elixir from: http://blog.oestrich.org/2017/07/using-ranch-with-elixir/
 
 To start navigate to the folder and type the following:
 
