@@ -1,6 +1,6 @@
 # EchoServer
 
-Basic tcp/ip echo server implementation in elixir using ranch.
+Basic TCP/IP echo server implementation in elixir using ranch.
 
 Credit to Eric Oestrich for his tutorial: http://blog.oestrich.org/2017/07/using-ranch-with-elixir/
 
